@@ -1,16 +1,17 @@
 .menu span{
   cursor: cell;
   display: block;
-  font-size: 1.5rem;
-  padding: 20px 0;
+  font-size: 2.5vw;
+  padding: 10px 0;
   width: 100%;
   background-color: #F2294E;
   align-self: center;
   text-align: center;
+  border-radius: 5px;
 }
 
 .menu span a{
-padding: 20px 11vw;
+padding: 5px 10.8vw;
 color: white;
 text-decoration: none;
 cursor: cell;
@@ -20,11 +21,15 @@ cursor: cell;
 .menu span a:hover {
   color: #F2294E;
   background-color: white;
+  border-color: #F2294E;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 3px auto;
 }
 
 .logowrapper {
   margin-left: -30px;
-  display: flex;
   height: 10vh;
   width: auto;
   align-items: left;
@@ -38,7 +43,7 @@ cursor: cell;
 }
 
 .cta {
-  background-color: black;
+  background-color: #F2294E;
   color: white;
   padding: 10px;
   border-radius: 15px;
@@ -49,43 +54,71 @@ cursor: cell;
   border: 2px;
   border-style: solid;
 }
+
 .cta:hover{
   color: #F2294E;
   background-color: white;
   border-color: #F2294E;
   border: 2px;
   border-style: solid;
-  
 }
 
+.introtext{
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #F2294E;
+  align-self: center;
+  text-align: center;
+  margin: 0 auto;
+}
 
 .textbox {
-  padding: 10px;
+  display: flex;
+  padding: 10px 0;
+}
+
+.textbox span{
+  display: block;
+  box-sizing: border-box;
 }
 
 .festivaltext {
-  padding-top: 10px;
+  padding: 10px 0;
   font-weight: 700;
   font-size: 3rem;
-  color: #1d1d1f;
+  color: #F2294E;
+}
+.festivallink:hover{
+  color: black;
+  cursor: cell;
 }
 
 .verticaltext {
-  top: 0;
-  margin: auto 0;
   transform: rotate(-90deg);
   font-weight: 700;
   font-size: 3.3rem;
-  height: 10vw
+  height: 10vw;
+  color: #F2294E;
+  margin: auto 0;
+}
+
+.verticaltext:hover{
+  color: black;
+  cursor: cell;
 }
 
 .contourtext {
+  color: black;
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 3vw;
   padding-bottom: 10px;
+}
+.contourtext span:hover {
+  font-weight: 400;
 }
 
 .contourmenu span{
+  padding: 2px 0;
   cursor: cell;
   display: block;
   box-sizing: border-box;
@@ -94,8 +127,8 @@ cursor: cell;
 .pinkbox{
   background-color: #F2295F;
   color: white;
+  border-radius: 5px;
 }
-
 
 footer{
   position: absolute;
@@ -110,9 +143,9 @@ footer{
 .grid{
   display: grid;
   margin: 0 auto;
+  margin-top: 20px;
   width: 95vw;
   grid-auto-rows: minmax(10vh, auto);
-
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
 }
