@@ -1,26 +1,29 @@
-ul{
-  height: 10vh;
-}
-li {
-  text-align: center;
-  display: flex;
-  float: left;
+.menu span{
+  cursor: cell;
+  display: block;
   font-size: 1.5rem;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #F2294E;
+  align-self: center;
+  text-align: center;
 }
 
-li a {
-  color: rgb(0, 0, 0);
-  padding: 14px 16px;
-  text-decoration: none;
+.menu span a{
+padding: 20px 11vw;
+color: white;
+text-decoration: none;
+cursor: cell;
 }
 
 /* Menu - Hover inverts colours */
-li a:hover {
-  color: white;
-  background-color: black;
+.menu span a:hover {
+  color: #F2294E;
+  background-color: white;
 }
 
 .logowrapper {
+  margin-left: -30px;
   display: flex;
   height: 10vh;
   width: auto;
@@ -31,6 +34,7 @@ li a:hover {
 .ctawrapper {
   margin: 0 auto;
   align-items: center;
+ 
 }
 
 .cta {
@@ -39,10 +43,21 @@ li a:hover {
   padding: 10px;
   border-radius: 15px;
   cursor: cell;
-  font-family: neue-haas-unica, sans-serif;
   letter-spacing: 1px;
   font-size: 1.3rem;
+  border-color: #F2294E;
+  border: 2px;
+  border-style: solid;
 }
+.cta:hover{
+  color: #F2294E;
+  background-color: white;
+  border-color: #F2294E;
+  border: 2px;
+  border-style: solid;
+  
+}
+
 
 .textbox {
   padding: 10px;
@@ -71,9 +86,16 @@ li a:hover {
 }
 
 .contourmenu span{
+  cursor: cell;
   display: block;
   box-sizing: border-box;
 }
+
+.pinkbox{
+  background-color: #F2295F;
+  color: white;
+}
+
 
 footer{
   position: absolute;
@@ -85,7 +107,7 @@ footer{
 /*                              Layout Formatting                      */
 
 /* Setup grid - Width of site @ 95%  */
-body {
+.grid{
   display: grid;
   margin: 0 auto;
   width: 95vw;
@@ -106,7 +128,6 @@ body {
 /*        Column Settings        */
 .column {
   display: flex;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 /*        Column Layouts        */
@@ -129,12 +150,26 @@ body {
   grid-gap: 10px;
 }
 
+.menu {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 10px;
+}
 
 
-/*        Row Colours for Formatting - Delete Before submitting        */
+
+
+/*        Row Colours for Formatting - Delete Before submitting       
+
+column {
+  background-color: rgba(0, 0, 0, .2);
+}
+
 header{
   background-color: pink;
 }
+
 nav{
   background-color: rgba(0, 110, 255, 0.7)
 }
@@ -158,3 +193,4 @@ nav{
 .foot {
   background-color: rgba(255, 0, 212, 0.7);
 }
+ */
