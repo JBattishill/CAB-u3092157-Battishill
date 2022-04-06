@@ -1,9 +1,10 @@
+ul{
+  height: 10vh;
+}
 li {
   text-align: center;
   display: flex;
   float: left;
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 400;
   font-size: 1.5rem;
 }
 
@@ -13,21 +14,11 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Menu - Hover inverts colours */
 li a:hover {
   color: white;
-  background-color: rgba(17, 17, 17, 0.5);
+  background-color: black;
 }
-
-body {
-  display: grid;
-  margin: 0 auto;
-  width: 95vw;
-  grid-auto-rows: minmax(10vh, auto);
-}
-
-
-
 
 .logowrapper {
   display: flex;
@@ -38,99 +29,87 @@ body {
 }
 
 .ctawrapper {
-  width: auto;
-  display: flex;
-  margin: 0;
+  margin: 0 auto;
   align-items: center;
-  vertical-align: center;
 }
 
 .cta {
-  padding: 10px 20px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 500;
-  letter-spacing: .03rem;
-  font-size: 1.3rem;
   background-color: black;
   color: white;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: cell;
+  font-family: neue-haas-unica, sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
 }
 
-nav {
-  display: grid;
-  grid-template-columns: 1;
-  grid-gap: 10px;
-  background-color: rgba(0, 110, 255, 0.7)
+.textbox {
+  padding: 10px;
 }
-
-.first {
-  background-color: rgba(0, 255, 234, 0.7);
-}
-
-.foot {
-  background-color: rgba(255, 0, 212, 0.7);
-}
-
-.second {
-  background-color: rgba(0, 255, 106, 0.7);
-}
-
-.third {
-  background-color: rgba(255, 0, 0, 0.897);
-}
-
-.fourth {
-  background-color: rgba(255, 238, 0, 0.897);
-}
-
-.headcol {
-  background-color: pink;
-}
-
-
 
 .festivaltext {
-  display: block;
-  margin-left: -3rem;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  padding-top: 10px;
   font-weight: 700;
   font-size: 3rem;
   color: #1d1d1f;
 }
 
 .verticaltext {
-  left: 2rem;
-  position: relative;
+  top: 0;
+  margin: auto 0;
   transform: rotate(-90deg);
-  font-family: neue-haas-grotesk-text, sans-serif;
   font-weight: 700;
   font-size: 3.3rem;
+  height: 10vw
 }
 
 .contourtext {
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
+  font-weight: 100;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
 }
 
-.mask span {
+.contourmenu span{
   display: block;
   box-sizing: border-box;
-  top: 4vh;
-  background-size: 100% 100%;
 }
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 95vw;
+}
+
 
 /*                              Layout Formatting                      */
 
-/*        Column Layouts        */
-.headcol {
+/* Setup grid - Width of site @ 95%  */
+body {
   display: grid;
-  width: auto;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 10px;
+  margin: 0 auto;
+  width: 95vw;
+  grid-auto-rows: minmax(10vh, auto);
+
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 400;
 }
 
+/*        Row Settings         */
+.row {
+  display: flex;
+  min-height: 10vh;
+  height: auto;
+  margin: 5px 0;
+}
+
+/*        Column Settings        */
+.column {
+  display: flex;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+/*        Column Layouts        */
 .leftlarge {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -146,27 +125,36 @@ nav {
 
 .onecol {
   display: grid;
-  grid-template-columns: repeat(1, auto);
+  grid-template-columns: 1;
   grid-gap: 10px;
 }
 
 
-/*        Row Settings         */
-.row {
-  display: flex;
-  vertical-align: center;
-  height: auto;
-  min-height: 10vh;
-  margin: 5px 0;
-}
-
-/*        Column Settings        */
-.column {
-  display: flex;
-  width: auto;
-  padding: 0;
-  margin: 0;
-  background-color: rgba(0, 0, 0, .2);
-}
 
 /*        Row Colours for Formatting - Delete Before submitting        */
+header{
+  background-color: pink;
+}
+nav{
+  background-color: rgba(0, 110, 255, 0.7)
+}
+
+.first {
+  background-color: rgba(0, 255, 234, 0.7);
+}
+
+.second {
+  background-color: rgba(0, 255, 106, 0.7);
+}
+
+.third {
+  background-color: rgba(255, 0, 0, 0.897);
+}
+
+.fourth {
+  background-color: rgba(255, 238, 0, 0.897);
+}
+
+.foot {
+  background-color: rgba(255, 0, 212, 0.7);
+}
