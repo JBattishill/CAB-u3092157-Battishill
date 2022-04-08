@@ -1,7 +1,7 @@
 .menu span{
   cursor: cell;
   display: block;
-  font-size: 2.5vw;
+  font-size: 2vw;
   padding: 10px 0;
   width: 100%;
   background-color: #F2294E;
@@ -11,7 +11,7 @@
 }
 
 .menu span a{
-padding: 5px 10.8vw;
+padding: 5px 10vw;
 color: white;
 text-decoration: none;
 cursor: cell;
@@ -186,7 +186,7 @@ footer{
 .menu {
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 2fr ;
   grid-gap: 10px;
 }
 
