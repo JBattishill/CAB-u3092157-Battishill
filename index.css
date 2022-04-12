@@ -1,66 +1,59 @@
-.menu span{
-  cursor: cell;
-  display: block;
-  font-size: 2vw;
-  padding: 10px 0;
-  width: 100%;
+.navbar {
   background-color: #F2294E;
-  align-self: center;
-  text-align: center;
-  border-radius: 5px;
+  font-family: stolzl, sans-serif;
+  top: 0;
+  position: sticky !important;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
 }
 
-.menu span a{
-padding: 5px 10vw;
+.navbar ul {
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar ul li {
+color: #F2294E;
+display: inline-block;
+padding: 1em;
 color: white;
 text-decoration: none;
-cursor: cell;
 }
 
-/* Menu - Hover inverts colours */
-.menu span a:hover {
-  color: #F2294E;
+.navbar ul li :hover {
   background-color: white;
-  border-color: #F2294E;
-  border: 2px;
-  border-style: solid;
-  border-radius: 5px;
-  padding: 3px auto;
+  color: #F2294E;
+  text-decoration: none;
+  cursor: cell;
 }
 
-.logowrapper {
-  margin-left: -30px;
-  height: 10vh;
-  width: auto;
+.logowrapper{
+padding: 1.5em 0;
+}
+
+.squarelogo{
+  padding-left: 1.5em;
+    height: 15vh;
+    width: auto;
+    align-items: left;
+    vertical-align: center;
+  }
+
+.widelogo {
+  height: auto;
+  width: 70vw;
   align-items: left;
   vertical-align: center;
 }
 
 .ctawrapper {
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
- 
-}
-
-.cta {
-  background-color: #F2294E;
-  color: white;
-  padding: 10px;
-  border-radius: 15px;
-  cursor: cell;
-  letter-spacing: 1px;
-  font-size: 1.3rem;
-  border-color: #F2294E;
-  border: 2px;
-  border-style: solid;
-}
-
-.cta:hover{
-  color: #F2294E;
-  background-color: white;
-  border-color: #F2294E;
-  border: 2px;
-  border-style: solid;
 }
 
 .herotext {
@@ -86,7 +79,6 @@ cursor: cell;
   padding: 1.5vh 0;
 }
 
-
 .textbox span{
   display: block;
   box-sizing: border-box;
@@ -98,6 +90,7 @@ cursor: cell;
   font-size: 3rem;
   color: #F2294E;
 }
+
 .festivallink:hover{
   color: black;
   cursor: cell;
@@ -140,24 +133,32 @@ cursor: cell;
   border-radius: 5px;
 }
 
-footer{
+/*                              Layout Formatting                      */
+header {
+  display: grid;
+  margin: 0 auto;
   position: relative;
-  bottom: 0;
+  top: 0;
+  padding: 5vh 0;
   width: 95vw;
 }
 
-
-/*                              Layout Formatting                      */
-
 /* Setup grid - Width of site @ 95%  */
 .grid{
+  box-sizing: border-box;
   display: grid;
   margin: 0 auto;
-  margin-top: 20px;
   width: 95vw;
   grid-auto-rows: minmax(10vh, auto);
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
+}
+
+footer{
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+  width: 95vw;
 }
 
 /*        Row Settings         */
@@ -181,7 +182,6 @@ footer{
 }
 
 .rightlarge {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
@@ -193,19 +193,10 @@ footer{
   grid-gap: 10px;
 }
 
-.menu {
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr ;
-  grid-gap: 10px;
-}
+/*        Row Colours for Formatting - Delete Before submitting       
 
-
-
-
-/*        Row Colours for Formatting - Delete Before submitting      */  
-
-column {
+.column {
   background-color: rgba(0, 0, 0, .2);
 }
 
@@ -214,7 +205,7 @@ header{
 }
 
 nav{
-  background-color: rgba(0, 110, 255, 0.7)
+  background-color: rgba(0, 110, 255,)
 }
 
 .first {
@@ -236,63 +227,127 @@ nav{
 .foot {
   background-color: rgba(255, 0, 212, 0.7);
 }
-
-
-/*        Try rotating text again      */  
-:root {
-  --offset: 6px;
+*/ 
+.button-container {
+ 
 }
 
-h2 {
-  width: 980px;
-  font-size: 100px;
-  line-height: 1.06;
-  letter-spacing: -0.02em;
-  color: #1d1d1f;
+.button {
+  font-size: 2em;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #F2294E;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  border: 2px solid #F2294E;
+  border-radius: 1000px;
+  padding: 1em 2em;
+  box-shadow: 0 2px 5px 0 rgba(3,6,26,0.15);
+  transition: .5s all ease-in-out;
 }
 
-.mask {
-  height: 106px;
-  position: relative;
-  overflow: hidden;
-  margin-top: var(--offset);
+.button :hover {
+    cursor: cell;
+    background: white;
+    color: #F2294E;
+    animation: none;
+    animation-play-state: paused;
 }
 
-.mask span {
-  display: block !important;
-  box-sizing: border-box;
-  position: absolute;
-  top: 100px;
-  padding-bottom: var(--offset);
-  background-size: 100% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
+.button-wiggle {
+  animation: wiggle 4s 2s infinite;
 }
 
-.mask span[data-show] {
-  transform: translateY(-100%);
-  transition: .5s transform ease-in-out;
+@keyframes wiggle {
+	5%,
+	50% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(0.9);
+	}
+	15% {
+		transform: scale(1.15);
+	}
+	20% {
+		transform: scale(1.15) rotate(-5deg);
+	}
+	25% {
+		transform: scale(1.15) rotate(5deg);
+	}
+	30% {
+		transform: scale(1.15) rotate(-3deg);
+	}
+	35% {
+		transform: scale(1.15) rotate(2deg);
+	}
+	40% {
+		transform: scale(1.15) rotate(0);
+	}
 }
 
-.mask span[data-up] {
-  transform: translateY(-200%);
-  transition: .5s transform ease-in-out;
+
+.button-pulse {
+  animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0 0 #F2294E;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0); 
+  }
 }
 
-.mask span:nth-child(1) {
-  background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+.button-float {
+  animation: float 1.5s linear alternate infinite;
 }
 
-.mask span:nth-child(2) {
-  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+@keyframes float {
+	50% {
+    transform: translateY(-px);
+  }
+  100% {
+    transform: translateY(-18px);
+  }
 }
 
-.mask span:nth-child(3) {
-  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
-}
 
-.mask span:nth-child(4) {
-  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+h1 {
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.3;
+  padding: 40px 20px 0 20px;
 }
+p {
+  text-align: center;
+  opacity: .8;
+}
+  a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    transition: border .3s;
+  }
+
+  a:hover {
+    border-bottom: 1px solid rgba(0,0,0,0);
+  }
+
+  /* Changes Logo when on small screen */
+ 
+  .image2{
+    display: none;
+  }
+ 
+ @media only screen and (max-width: 700px){ 
+    .image1{
+      display: none;
+    }
+ 
+    .image2{
+      display: flex;
+    }
+ }
