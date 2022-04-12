@@ -1,21 +1,30 @@
 .navbar {
   background-color: #F2294E;
   font-family: stolzl, sans-serif;
-  font-size: 1.6em;
+  font-size: 1.2em;
   box-shadow: 0 11px 10px 0 rgba(3,6,26,0.35);
   margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
 }
 .leftnav{
   padding-left: 2.5vw;
 }
 
 .navbar ul {
+  margin: 0 auto;
+text-decoration: none;
 align-items: center;
 text-align: center;
-text-decoration: none;
+justify-items: center;
 }
 
 .navbar ul li a{
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
 text-decoration: none;
 padding-right: 5vw;
 color: white;
@@ -39,11 +48,9 @@ margin: 0 auto;
 }
 
 .squarelogo{
-  padding: 0 1em;
-  height: 15vh;
   margin: 0 auto;
   max-height: 10vh;
-  max-width: 60vw;
+  max-width: auto;
   width: auto;
   height: auto;
   vertical-align: center;
@@ -51,9 +58,9 @@ margin: 0 auto;
 
 .widelogo {
   max-height: 10vh;
-  max-width: 60vw;
+  max-width: auto;
   width: auto;
-  height: auto;
+  height: 10vh;
   margin: auto;
   left: 0;
 }
@@ -268,7 +275,7 @@ nav{
     display: none;
   }
  
- @media only screen and (max-width: 500px){ 
+ @media only screen and (max-width: 650px){ 
     .image1{
       display: none;
     }
