@@ -3,6 +3,7 @@
   font-family: stolzl, sans-serif;
   font-size: 1.6em;
   box-shadow: 0 11px 10px 0 rgba(3,6,26,0.35);
+  margin: 0 auto;
 }
 .leftnav{
   padding-left: 2.5vw;
@@ -135,8 +136,8 @@ header {
   font-family: neue-haas-unica, sans-serif;
   font-weight: 600;
   display: grid;
-  margin: 0 auto;
   padding-top: 5vh 0;
+  max-height: 30vh;
 }
 
 /* Setup grid - Width of site @ 95%  */
