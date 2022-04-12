@@ -1,61 +1,60 @@
 .navbar {
   background-color: #F2294E;
   font-family: stolzl, sans-serif;
-  top: 0;
-  position: sticky !important;
-  color: white;
-  font-size: 2em;
-  text-decoration: none;
+  font-size: 1.6em;
   box-shadow: 0 11px 10px 0 rgba(3,6,26,0.35);
+}
+.leftnav{
+  padding-left: 2.5vw;
 }
 
 .navbar ul {
-  margin: 0;
-  text-align: center;
-  text-decoration: none;
-}
-
-.navbar ul li {
-color: #F2294E;
-display: inline-block;
-padding: 1em;
-color: white;
+align-items: center;
+text-align: center;
 text-decoration: none;
 }
 
-.navbar ul li :hover {
-  background-color: white;
-  color: #F2294E;
-  text-decoration: none;
-  cursor: cell;
+.navbar ul li a{
+text-decoration: none;
+padding-right: 5vw;
+color: white;
+}
+
+.navbar ul li a:hover {
+background-color: rgba(255, 255, 255, 0.4);
+text-decoration: underline;
+cursor: cell;
+}
+
+.logocontainer{
+  width: 95vw;
+  margin: auto;
 }
 
 .logowrapper{
-padding: 1.5em 0;
+padding-top: 1em;
+padding-left: 2.5vw;
+margin: 0 auto;
 }
 
 .squarelogo{
-  padding-left: 1.5em;
-    height: 15vh;
-    width: auto;
-    align-items: left;
-    vertical-align: center;
-  }
-
-.widelogo {
+  padding: 0 1em;
+  height: 15vh;
+  margin: 0 auto;
+  max-height: 10vh;
+  max-width: 60vw;
+  width: auto;
   height: auto;
-  width: 65vw;
-  align-items: left;
   vertical-align: center;
 }
 
-.ctawrapper {
-  width: 20vw;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.widelogo {
+  max-height: 10vh;
+  max-width: 60vw;
+  width: auto;
+  height: auto;
+  margin: auto;
+  left: 0;
 }
 
 .herotext {
@@ -107,17 +106,13 @@ padding: 1.5em 0;
   margin: auto 0;
 }
 
-.verticaltext:hover{
-  color: black;
-  cursor: cell;
-}
-
 .contourtext {
   color: black;
   font-weight: 100;
   font-size: 3vw;
   padding-bottom: 10px;
 }
+
 .contourtext span:hover {
   font-weight: 400;
 }
@@ -137,12 +132,11 @@ padding: 1.5em 0;
 
 /*                              Layout Formatting                      */
 header {
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 600;
   display: grid;
   margin: 0 auto;
-  position: relative;
-  top: 0;
-  padding: 5vh 0;
-  width: 95vw;
+  padding-top: 5vh 0;
 }
 
 /* Setup grid - Width of site @ 95%  */
@@ -230,54 +224,31 @@ nav{
   background-color: rgba(255, 0, 212, 0.7);
 }
 */  
-
-h1 {
-  font-weight: 300;
-  font-size: 2em;
-  text-align: center;
-  line-height: 1.3;
-  padding: 40px 20px 0 20px;
-}
-p {
-  text-align: center;
-  opacity: .8;
+.ctawrapper {
+  width: auto;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
 }
 
-  a {
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid white;
-    transition: border .3s;
-  }
-
-
-.button {
+.cta {
   cursor: cell;
-  width: 20vw;
-  padding-left: 10px;
-  font-size: 2em;
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 600;
-  text-align: center;
+  font-size: 1.6em;
   color: #F2294E;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   border: 2px solid #F2294E;
   border-radius: 100px;
   padding: .75em 1.5em;
   transition: .5s all ease-in-out;
 }
 
-.button:hover {
+.cta:hover {
     cursor: cell;
     background-color: #F2294E;
     color: white;
     animation: none;
     animation-play-state: paused;
-}
-
-.button-wiggle {
-  animation: wiggle 4s 2s infinite;
 }
 
 .button-pulse {
