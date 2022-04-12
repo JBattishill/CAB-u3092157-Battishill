@@ -6,6 +6,7 @@
   color: white;
   font-size: 2em;
   text-decoration: none;
+  box-shadow: 0 11px 10px 0 rgba(3,6,26,0.35);
 }
 
 .navbar ul {
@@ -43,12 +44,13 @@ padding: 1.5em 0;
 
 .widelogo {
   height: auto;
-  width: 70vw;
+  width: 65vw;
   align-items: left;
   vertical-align: center;
 }
 
 .ctawrapper {
+  width: 20vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -227,92 +229,7 @@ nav{
 .foot {
   background-color: rgba(255, 0, 212, 0.7);
 }
-*/ 
-.button-container {
- 
-}
-
-.button {
-  font-size: 2em;
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 400;
-  text-align: center;
-  color: #F2294E;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  border: 2px solid #F2294E;
-  border-radius: 1000px;
-  padding: 1em 2em;
-  box-shadow: 0 2px 5px 0 rgba(3,6,26,0.15);
-  transition: .5s all ease-in-out;
-}
-
-.button :hover {
-    cursor: cell;
-    background: white;
-    color: #F2294E;
-    animation: none;
-    animation-play-state: paused;
-}
-
-.button-wiggle {
-  animation: wiggle 4s 2s infinite;
-}
-
-@keyframes wiggle {
-	5%,
-	50% {
-		transform: scale(1);
-	}
-	10% {
-		transform: scale(0.9);
-	}
-	15% {
-		transform: scale(1.15);
-	}
-	20% {
-		transform: scale(1.15) rotate(-5deg);
-	}
-	25% {
-		transform: scale(1.15) rotate(5deg);
-	}
-	30% {
-		transform: scale(1.15) rotate(-3deg);
-	}
-	35% {
-		transform: scale(1.15) rotate(2deg);
-	}
-	40% {
-		transform: scale(1.15) rotate(0);
-	}
-}
-
-
-.button-pulse {
-  animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
-  box-shadow: 0 0 0 0 #F2294E;
-}
-@keyframes pulse {
-  to {
-    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0); 
-  }
-}
-
-.button-float {
-  animation: float 1.5s linear alternate infinite;
-}
-
-@keyframes float {
-	50% {
-    transform: translateY(-px);
-  }
-  100% {
-    transform: translateY(-18px);
-  }
-}
-
+*/  
 
 h1 {
   font-weight: 300;
@@ -325,6 +242,7 @@ p {
   text-align: center;
   opacity: .8;
 }
+
   a {
     color: white;
     text-decoration: none;
@@ -332,9 +250,45 @@ p {
     transition: border .3s;
   }
 
-  a:hover {
-    border-bottom: 1px solid rgba(0,0,0,0);
+
+.button {
+  cursor: cell;
+  width: 20vw;
+  padding-left: 10px;
+  font-size: 2em;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #F2294E;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 2px solid #F2294E;
+  border-radius: 100px;
+  padding: .75em 1.5em;
+  transition: .5s all ease-in-out;
+}
+
+.button:hover {
+    cursor: cell;
+    background-color: #F2294E;
+    color: white;
+    animation: none;
+    animation-play-state: paused;
+}
+
+.button-wiggle {
+  animation: wiggle 4s 2s infinite;
+}
+
+.button-pulse {
+  animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0 0 #F2294E;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0); 
   }
+}
 
   /* Changes Logo when on small screen */
  
@@ -342,7 +296,7 @@ p {
     display: none;
   }
  
- @media only screen and (max-width: 700px){ 
+ @media only screen and (max-width: 500px){ 
     .image1{
       display: none;
     }
