@@ -8,51 +8,42 @@
   
   .ctawrapper{
   grid-area: cta;
-  
   }
   
-  .item-c{
-  
-  grid-area: rightbox;
-  
+  .leftbox{
+    grid-area: leftbox;
+  }
+  .rightbox{
+   grid-area: rightbox;
   }
   
-  .item-d{
-  
-  grid-area: herotext;
-  
+  .herotext{
+    grid-area: herotext;
   }
   
-  .item-e{
-  
+  .footer{
   grid-area: footer;
-  
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
   }
   
   .container{
-  margin: 0 auto;
-  width: 95vw;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
+  margin: 0 auto;
+  height: auto;
+  width: 95vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:repeat(auto);
   grid-template-areas:
-  
   "logo logo . cta"
-  
-  ". herotext herotext ."
-  
+  " . herotext herotext . "
   "leftbox rightbox rightbox rightbox"
-  
   "leftbox leftbox leftbox rightbox"
-  
   "leftbox rightbox rightbox rightbox"
-  
   "leftbox leftbox leftbox rightbox"
-  
   "leftbox rightbox rightbox rightbox"
-  
   "footer footer footer footer"
-  
   }
   
 .navbar {
@@ -60,7 +51,6 @@
   font-family: stolzl, sans-serif;
   font-size: 1.2em;
   box-shadow: 0 11px 10px 0 rgba(3,6,26,0.35);
-  margin: 0 auto;
   align-items: center;
   text-align: center;
   justify-items: center;
@@ -180,12 +170,15 @@ margin: 0 auto;
   color: white;
   border-radius: 5px;
 }
+
+header {
+  width: 100%;
+}
+
 /*  Testing grid layout */
 
 /*                              Layout Formatting                     
-header {
-  display: grid;
-}
+
 
 /* Setup grid - Width of site @ 95% 
 .grid{
@@ -272,6 +265,7 @@ footer{
   background-color: rgba(255, 0, 212, 0.7);
 }
 
+/* moved
 .ctawrapper {
   width: auto;
   margin: 0 auto;
@@ -290,7 +284,7 @@ footer{
   padding: .75em 1.5em;
   transition: .5s all ease-in-out;
 }
-
+ */
 .cta:hover {
     cursor: cell;
     background-color: #F2294E;
