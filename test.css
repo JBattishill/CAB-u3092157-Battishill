@@ -21,8 +21,7 @@
     background-color: rgb(56, 192, 255);
     min-height: 10vh;
     max-height: fit-content;
-    width: 98%;
-    padding-right: 2%;
+    width: 100%;
 }
 
 .squarelogo {
@@ -106,40 +105,36 @@ header {
 }
 
 nav {
-    margin: 2vh 0;
     grid-area: nav;
-    display: flex;
     background-color: #F2294E;
     font-family: stolzl, sans-serif;
     font-size: 1.2em;
     box-shadow: 0 11px 10px 0 rgba(3, 6, 26, 0.35);
+    margin:2vh 0;
+ 
 }
 
-nav ul {
-    text-decoration: none;
+nav li {
+    display: block;
+    float:left;
+
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 auto;
-    height: 10vh;
-    width: auto;
-    padding: 0 2.5vw;
+nav li:hover {
+    background-color: white;
 }
 
-nav ul li:hover {
-    background-color: aqua;
-}
-
-
-nav ul li a {
+nav a {
+    display: block;
+    padding: 15px 2.7vw;
     text-decoration: none;
     color: white;
 }
 
-nav ul li a:hover {
+nav a:hover {
     text-decoration: underline;
     cursor: cell;
+    color: #F2294E;
 }
 
 body {
