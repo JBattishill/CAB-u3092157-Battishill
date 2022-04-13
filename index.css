@@ -13,6 +13,7 @@
   .leftbox{
     grid-area: leftbox;
   }
+
   .rightbox{
    grid-area: rightbox;
   }
@@ -54,9 +55,6 @@
   align-items: center;
   text-align: center;
   justify-items: center;
-}
-.leftnav{
-  
 }
 
 .navbar ul {
