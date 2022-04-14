@@ -15,22 +15,28 @@
 }
 
 .logowrapper {
-    grid-area: logo;
-    display: flex;
-    justify-content: left;
-    height: 10vh;
-    width: 100%;
+        grid-area: logo;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        flex-direction: row;
+        align-content: space-around;
+        justify-content: flex-start;
+        float: left;
+        flex-wrap: nowrap;
 }
 
 .squarelogo {
     max-height: 10vh;
     display: none;
     object-fit: scale-down;
+    width: auto;
 }
 
 .widelogo { 
-    width: 100%;
+    max-height: 10vh;
     object-fit: scale-down;
+    width: auto;
 }
 
 .ctawrapper {
@@ -80,18 +86,18 @@
 }
 
 header {
-    row-gap: 1vh;
+    row-gap: 2vh;
     margin-top: 2vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;;
     grid-template-rows: auto;
     grid-template-areas:
-        "logo logo . cta"
-        "nav nav nav nav";
+        "logo logo logo logo logo . cta cta"
+        "nav nav nav nav nav nav nav nav";
 }
 
 .container {
-    row-gap: 1vh;
+    row-gap: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -104,6 +110,7 @@ header {
 }
 
 .herowrapper{
+    margin-top: 2vh;
     grid-area: hero;
     width: 100%;
     font-family: stolzl, sans-serif;
@@ -112,29 +119,19 @@ header {
 
 .herotext{
     height: 100%;
-    min-height: 30vh;
-    margin: auto;
     display: block;
     text-align: center;
 }
   .herotext h1{
-    margin: 0;
-    font-size: 6vw;
+    font-size: 4.5vw;
     color: #F2294E;
   }
-  .herotext h3{
-    font-size: 3vw;
-  }
 
-.heroblock{
-    display: block;
-    font-family: stolzl, sans-serif;
-    color: black;
-    text-align: center;
-    padding: 2vh 0 5vh;
-    font-size: 3vw;;
-    width: 100%;
-}
+  .herotext h3{
+    line-height: 150%;
+    padding-top: 1vh;
+    font-size: 2vw;
+  }
 
 .acknowledgement{
 grid-area: acknowledgement;
@@ -147,12 +144,12 @@ background-color: bisque;
 }
 
 nav {
+    width: 100%;
     grid-area: nav;
     background-color: #F2294E;
     font-family: stolzl, sans-serif;
-    font-size: 2vw;
+    font-size: 150%;
     box-shadow: 0 11px 10px 0 rgba(3, 6, 26, 0.35);
-    margin:2vh 0;
 }
 
 nav li {
@@ -178,13 +175,14 @@ nav a:hover {
 }
 
 body {
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 95vw;
     margin: 0 auto;
-    overflow: hidden
 }
 
 /* Changes Logo when on small screen */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
     .widelogo {
         display: none;
     }
@@ -202,8 +200,6 @@ body {
 .locationblock{
     display: block;
     text-align: center;
-    padding: 2.5vh 0;
-    height: 15vh;
     width: 100%;
     background: linear-gradient(-45deg,#299ff2, #5896f4, #7d8bf0, #9e7ee7, #ba6ed8, #d15dc3, #e34baa, #ef398d, #f42b6e, #F2294E);
 	background-size: 400% 400%;
@@ -221,14 +217,6 @@ body {
 	}
 }
 
-.locationtext{
-    font-size: 5vw;
-    margin-bottom: 3vh;
-    text-align: center;
-    vertical-align: center;
-    color: white;
-    text-decoration: underline;
-}
 .maskwrapper {
     color: white;
  }
@@ -236,8 +224,8 @@ body {
 .mask{
     text-align: center;
     overflow: hidden;
-    height: 8vh;
-    line-height: 8vh;
+    height: 9vw;
+    line-height: 9vw;
 }
 
 .masktext {
@@ -267,30 +255,49 @@ body {
   }
   
   @-webkit-keyframes move {
-    0%  { top: 0vh; }
-    25% { top: -8vh; }
-    50% { top: -16vh; }
-    75% { top: 7vh; }
-    100% { top: 0vh; }
+    0%  { top: 0vw; }
+    25% { top: -9vw; }
+    50% { top: -18vw; }
+    75% { top: 9vw; }
+    100% { top: 0vw; }
   }
   @-moz-keyframes move {
-    0%  { top: 0vh; }
-    25% { top: -8vh; }
-    50% { top: -16vh; }
-    75% { top: 7vh; }
-    100% { top: 0vh; }
+    0%  { top: 0vw; }
+    25% { top: -9vw; }
+    50% { top: -18vw; }
+    75% { top: 9vw; }
+    100% { top: 0vw; }
   }
   @-o-keyframes move {
-    0%  { top: 0vh; }
-    25% { top: -8vh; }
-    50% { top: -16vh; }
-    75% { top: 7vh; }
-    100% { top: 0vh; }
+    0%  { top: 0vw; }
+    25% { top: -9vw; }
+    50% { top: -18vw; }
+    75% { top: 9vw; }
+    100% { top: 0vw; }
   }
   @keyframes move {
-    0%  { top: 0vh; }
-    25% { top: -8vh; }
-    50% { top: -16vh; }
-    75% { top: 7vh; }
-    100% { top: 0vh; }
+    0%  { top: 0vw; }
+    25% { top: -9vw; }
+    50% { top: -18vw; }
+    75% { top: 9vw; }
+    100% { top: 0vw; }
   }
+
+/* testing CAB ICON mask - not working
+  .twenty {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+
+  background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/234228/alpha-cat.png);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: 80%;
+}
+ */
