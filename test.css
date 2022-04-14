@@ -15,15 +15,16 @@
 }
 
 .logowrapper {
-        grid-area: logo;
-        display: flex;
-        vertical-align: middle;
-        align-items: center;
-        flex-direction: row;
-        align-content: space-around;
-        justify-content: flex-start;
-        float: left;
-        flex-wrap: nowrap;
+    padding-left: 5vw;
+    grid-area: logo;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: flex-start;
+    float: left;
+    flex-wrap: nowrap;
 }
 
 .squarelogo {
@@ -43,8 +44,7 @@
     grid-area: cta;
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    width: auto;
+    width: 100%;
 }
 
 .cta {
@@ -79,24 +79,27 @@
     }
 }
 
-.item-d {
+footer {
     grid-area: footer;
     background-color: rgba(255, 238, 0, 0.897);
     text-align: center;
 }
 
 header {
+    width: 100%;
     row-gap: 2vh;
     margin-top: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;;
     grid-template-rows: auto;
     grid-template-areas:
-        "logo logo logo logo logo . cta cta"
+        "logo logo logo logo logo . . cta"
         "nav nav nav nav nav nav nav nav";
 }
 
 .container {
+    width: 90vw;
+    margin: 0 auto;
     row-gap: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -137,6 +140,7 @@ header {
 grid-area: acknowledgement;
 background-color: bisque;
 }
+
 .twenty{
     grid-area: twenty;
     background-color: coral;
@@ -144,6 +148,7 @@ background-color: bisque;
 }
 
 nav {
+    padding: 0 5vw;
     width: 100%;
     grid-area: nav;
     background-color: #F2294E;
@@ -175,10 +180,7 @@ nav a:hover {
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 95vw;
-    margin: 0 auto;
+    overflow: auto;
 }
 
 /* Changes Logo when on small screen */
