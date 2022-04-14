@@ -18,9 +18,7 @@
     grid-area: logo;
     display: flex;
     justify-content: left;
-    background-color: rgb(56, 192, 255);
-    min-height: 10vh;
-    max-height: fit-content;
+    height: 10vh;
     width: 100%;
 }
 
@@ -30,8 +28,7 @@
     object-fit: scale-down;
 }
 
-.widelogo {
-    height: auto;
+.widelogo { 
     width: 100%;
     object-fit: scale-down;
 }
@@ -76,9 +73,6 @@
     }
 }
 
-
-
-
 .item-d {
     grid-area: footer;
     background-color: rgba(255, 238, 0, 0.897);
@@ -86,6 +80,7 @@
 }
 
 header {
+    row-gap: 1vh;
     margin-top: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -96,28 +91,73 @@ header {
 }
 
 .container {
+    row-gap: 1vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "main main . sidebar"
-        "footer footer footer footer";
+        ". hero hero hero hero hero hero ."
+        "location location location location location location location location "
+        "acknowledgement acknowledgement acknowledgement twenty twenty twenty twenty twenty "
+        "main main main main main main sidebar sidebar"
+        "footer footer footer footer footer footer footer footer";
+}
+
+.herowrapper{
+    grid-area: hero;
+    width: 100%;
+    font-family: stolzl, sans-serif;
+    overflow-wrap: break-word;
+}
+
+.herotext{
+    height: 100%;
+    min-height: 30vh;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+  .herotext h1{
+    margin: 0;
+    font-size: 6vw;
+    color: #F2294E;
+  }
+  .herotext h3{
+    font-size: 3vw;
+  }
+
+.heroblock{
+    display: block;
+    font-family: stolzl, sans-serif;
+    color: black;
+    text-align: center;
+    padding: 2vh 0 5vh;
+    font-size: 3vw;;
+    width: 100%;
+}
+
+.acknowledgement{
+grid-area: acknowledgement;
+background-color: bisque;
+}
+.twenty{
+    grid-area: twenty;
+    background-color: coral;
+
 }
 
 nav {
     grid-area: nav;
     background-color: #F2294E;
     font-family: stolzl, sans-serif;
-    font-size: 1.2em;
+    font-size: 2vw;
     box-shadow: 0 11px 10px 0 rgba(3, 6, 26, 0.35);
     margin:2vh 0;
- 
 }
 
 nav li {
     display: block;
     float:left;
-
 }
 
 nav li:hover {
@@ -148,8 +188,109 @@ body {
     .widelogo {
         display: none;
     }
-
     .squarelogo {
         display: flex;
     }
 }
+
+/* Testing rotation */
+.locationwrapper{
+    grid-area: location;
+    font-family: stolzl, sans-serif;
+    overflow-wrap: break-word;
+}
+.locationblock{
+    display: block;
+    text-align: center;
+    padding: 2.5vh 0;
+    height: 15vh;
+    width: 100%;
+    background: linear-gradient(-45deg,#299ff2, #5896f4, #7d8bf0, #9e7ee7, #ba6ed8, #d15dc3, #e34baa, #ef398d, #f42b6e, #F2294E);
+	background-size: 400% 400%;
+	animation: gradient 15s 5s ease-in-out infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.locationtext{
+    font-size: 5vw;
+    margin-bottom: 3vh;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    text-decoration: underline;
+}
+.maskwrapper {
+    color: white;
+ }
+
+.mask{
+    text-align: center;
+    overflow: hidden;
+    height: 8vh;
+    line-height: 8vh;
+}
+
+.masktext {
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: 4.5vw;
+
+  /*animation*/
+  -webkit-animation:move 8s;
+     -moz-animation:move 8s;
+      -ms-animation:move 8s;
+       -o-animation:move 8s;
+          animation:move 8s;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count:infinite;
+     -moz-animation-iteration-count:infinite;
+      -ms-animation-iteration-count:infinite;
+       -o-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;
+  /*animation-delay*/
+  -webkit-animation-delay:4s;
+     -moz-animation-delay:4s;
+      -ms-animation-delay:4s;
+       -o-animation-delay:4s;
+          animation-delay:4s;
+  }
+  
+  @-webkit-keyframes move {
+    0%  { top: 0vh; }
+    25% { top: -8vh; }
+    50% { top: -16vh; }
+    75% { top: 7vh; }
+    100% { top: 0vh; }
+  }
+  @-moz-keyframes move {
+    0%  { top: 0vh; }
+    25% { top: -8vh; }
+    50% { top: -16vh; }
+    75% { top: 7vh; }
+    100% { top: 0vh; }
+  }
+  @-o-keyframes move {
+    0%  { top: 0vh; }
+    25% { top: -8vh; }
+    50% { top: -16vh; }
+    75% { top: 7vh; }
+    100% { top: 0vh; }
+  }
+  @keyframes move {
+    0%  { top: 0vh; }
+    25% { top: -8vh; }
+    50% { top: -16vh; }
+    75% { top: 7vh; }
+    100% { top: 0vh; }
+  }
