@@ -28,13 +28,12 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        ". hero hero hero hero hero hero ."
+        "hero hero hero hero cab cab cab cab"
         "location location location location location location location location "
         "acknowledgement acknowledgement acknowledgement twenty twenty twenty twenty twenty "
         "main main main main main main sidebar sidebar"
         "footer footer footer footer footer footer footer footer";
 }
-
 .herowrapper{
     margin-top: 2vh;
     grid-area: hero;
@@ -42,23 +41,44 @@ footer {
     font-family: stolzl, sans-serif;
     overflow-wrap: break-word;
 }
-
 .herotext{
     height: 100%;
     display: block;
     text-align: left;
 }
   .herotext h1{
-    font-size: 4.5vw;
+    font-size: 2.5vw;
     color: #F2294E;
   }
 
   .herotext h3{
     line-height: 150%;
     padding-top: 1vh;
-    font-size: 2vw;
+    font-size: 1.5vw;
+
   }
 
+.cabwrapper{
+    grid-area: cab;
+    width: 100%;
+    font-family: stolzl, sans-serif;
+    overflow-wrap: break-word;
+}
+.cabtext{
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+  .cabtext h1{
+    font-size: 3.5vw;
+    color: #F2294E;
+  }
+
+  .cabtext h3{
+    line-height: 150%;
+    padding-top: 1vh;
+    font-size: 1.5vw;
+  }
 .acknowledgement{
 grid-area: acknowledgement;
 background-color: bisque;
@@ -70,67 +90,6 @@ background-color: bisque;
 
 }
 
-nav {
-    margin: 0;
-    padding: 1vh 5vw;
-    width: 100%;
-    grid-area: nav;
-    font-family: stolzl, sans-serif;
-    font-size: 25px;
-    box-shadow: 0 5px 5px 0 rgba(3, 6, 26, 0.35);
-    background-color: #F2294E;
-}
-
-nav li {
-display: block;
-float: left;
-}
-
-nav a {
-    position: relative;
-    border-width: 5px;
-    color: white;
-    display: block;
-    padding: 5px 2vw 5px 0;
-    text-decoration: none;
-}
-
-nav a:hover {
-    cursor: cell;
-}
-
-nav a:after {    
-    background: none repeat scroll 0 0 transparent;
-    content: "";
-    margin-bottom: -3px;
-    bottom: -6px;
-    display: block;
-    height: 3px;
-    position: relative;
-    background: white;
-    transition: width 0.5s ease 0s, left 0.5s ease 0s;
-    width: 0;
-  }
-  nav a:hover:after { 
-    width: 100%; 
-  }
-
-body {
-    overflow: auto;
-}
-
-/* Changes Logo when on small screen */
-@media only screen and (max-width: 800px) {
-    .widelogo {
-        display: none;
-    }
-    .squarelogo {
-        display: flex;
-    }
-nav{
-    font-size: 3.1vw;
-}    
-}
 
 /* Testing rotation */
 .locationwrapper{
@@ -249,7 +208,8 @@ nav{
 /* Grid Layouts - 2 - I want to try to get this down to 1 layout before submitting. */
 /* Header - Logo, Donate button and Navbar */
 header {
-    width: 100%;
+    overflow-x: hidden;
+    width: 100vw;
     row-gap: 2vh;
     margin-top: 2vh;
     display: grid;
@@ -264,16 +224,15 @@ header {
     padding-left: 5vw;
     grid-area: logo;
     display: flex;
-}
-/* Media function switches wide logo so */
+    align-items: center;
 
+}
 .squarelogo {
     max-height: 10vh;
     display: none;
     object-fit: scale-down;
     width: auto;
 }
-
 .widelogo { 
     max-height: 10vh;
     object-fit: scale-down;
@@ -321,7 +280,65 @@ header {
 
 
 
-/* Header - Logo, Donate button and Navbar */
+/* Navbar - Menu */
+nav {
+    margin: 0;
+    padding: 1vh 5vw;
+    width: 100%;
+    grid-area: nav;
+    font-family: stolzl, sans-serif;
+    font-size: 25px;
+    box-shadow: 0 5px 5px 0 rgba(3, 6, 26, 0.35);
+    background-color: #F2294E;
+}
+
+nav li {
+display: block;
+float: left;
+}
+
+nav a {
+    position: relative;
+    border-width: 5px;
+    color: white;
+    display: block;
+    padding: 5px 2vw 5px 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    cursor: cell;
+}
+
+nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    margin-bottom: -3px;
+    bottom: -6px;
+    display: block;
+    height: 3px;
+    position: relative;
+    background: white;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+  nav a:hover:after { 
+    width: 100%; 
+  }
 
 
-/* Header - Logo, Donate button and Navbar */
+/* Body - manages overflow */
+
+
+/* Changes Logo when on small screen */
+@media only screen and (max-width: 650px) {
+    .widelogo {
+        display: none;
+    }
+    .squarelogo {
+        display: flex;
+    }
+nav{
+    font-size: 3.1vw;
+}    
+}
