@@ -170,6 +170,91 @@ footer {
       "commish commish commish covid covid covid covid covid"
       "footer footer footer footer footer footer footer footer";
 }
+
+.festivalcontainer {
+  font-family: stolzl, sans-serif;
+  width: 90vw;
+  margin: 0 auto;
+  row-gap: 2vh;
+  column-gap: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+      ". main main main main main main ."
+      "footer footer footer footer footer footer footer footer";
+}
+
+.redbg{
+  background-color: #F2294E;
+  width: 150%;
+  height: 100%;
+  color:white;
+  padding: 2vh 20vw;
+  margin: 0 20vw;
+  position: relative;
+  left: -20vw;
+}
+.redtext{
+  width: 100%;
+  height: 100%;
+  color: #F2294E;
+  position: relative;
+  font-weight: 500;
+
+}
+.textbox h2{
+  color:white;
+}
+.festivalmain{
+  grid-area: main;
+}
+.festivalwrapper{
+  margin-top: 2vh;
+  grid-area: hero;
+  width: 100%;
+  font-family: stolzl, sans-serif;
+  overflow-wrap: break-word;
+}
+.festivaltext{
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: left;
+}
+.festivaltext h1{
+  font-size: 5vw;
+  color: #F2294E;
+}
+.festivaltext h2{
+  font-size: 3vw;
+  color: black;
+  padding-bottom: 2vh;
+}
+.festivaltext h3{
+  line-height: 150%;
+  font-size: 1.5vw;
+}
+.festivaltext h4{
+  line-height: 200%;
+  font-size: 1.1vw;
+}
+.festivaltext p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+}
+
+.textbox{
+  margin: 3vh 0;
+  width: 100%;
+}
+
+.centeredtext {
+text-align: center;
+}
+
+
+
 .herowrapper{
   margin-top: 2vh;
   grid-area: hero;
@@ -192,7 +277,6 @@ footer {
   color: black;
   padding-bottom: 2vh;
 }
-
 .herotext h3{
   line-height: 150%;
   font-size: 1.5vw;
@@ -257,6 +341,9 @@ mask-size: 80%;
 
 /* Grid Layouts - 2 - I want to try to get this down to 1 layout before submitting. */
 /* Header - Logo, Donate button and Navbar */
+a{
+  cursor: cell;
+}
 header {
   overflow-x: hidden;
   width: 100vw;
@@ -599,4 +686,8 @@ img {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+body{
+  overflow-x: hidden;
 }
