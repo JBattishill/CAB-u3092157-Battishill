@@ -371,15 +371,12 @@ header {
   filter: invert(26%) sepia(46%) saturate(5515%) hue-rotate(335deg) brightness(97%) contrast(95%);
   animation: logoslide 2s infinite 0s
 }
-
-@keyframes logoshake {
+@keyframes logoslide {
   0%  { padding-left: 0vw; }
   25% { padding-left: 1vw;  }
   50% { padding-left: 1vw; }
   100% { padding-left: 0vw;  }
 }
-
-
 .squarelogo {
   max-height: 10vh;
   display: none;
@@ -398,7 +395,6 @@ header {
   align-items: center;
   width: 100%;
 }
-
 .cta {
   cursor: cell;
   font-size: 1.6em;
@@ -411,7 +407,6 @@ header {
   transition: .5s all ease-in-out;
   text-align: center;
 }
-
 .cta:hover {
   cursor: cell;
   background-color: #F2294E;
@@ -424,7 +419,6 @@ header {
   animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
   box-shadow: 0 0 0 0 #F2294E;
 }
-
 @keyframes pulse {
   to {
       box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
@@ -529,12 +523,12 @@ nav a:hover:after {
 
 /* Changes Logo when on small screen */
 @media only screen and (max-width: 650px) {
-  .widelogo {
-      display: none;
-  }
-  .squarelogo {
-      display: flex;
-  }
+.widelogo {
+    display: none;
+}
+.squarelogo {
+    display: flex;
+}
 nav{
   font-size: 3.1vw;
 }
@@ -554,10 +548,11 @@ nav{
   font-size: 3.5vw;
 }
 }
+
 .artists{
   height: 100%;
-    width: 100%;
-    grid-area: artists;
+  width: 100%;
+  grid-area: artists;
 }
 
 .mySlides {display: none}
