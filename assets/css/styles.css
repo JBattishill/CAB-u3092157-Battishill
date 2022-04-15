@@ -147,9 +147,13 @@
 }
 
 footer {
-  grid-area: footer;
-  background-color: rgba(255, 238, 0, 0.897);
+  margin: 0 auto;
   text-align: center;
+  padding: 5vh 0;
+  grid-area: footer;
+  background-color: #F2294E;
+  width: 100%;
+  color: white;
 }
 
 .container {
@@ -283,10 +287,10 @@ text-align: center;
 }
 .redblock{
   grid-area: redblock;
-  margin-left: 12vw;
+  margin-left: 14vw;
   height: 120%;
-  width: 12.5%;
-  background-color: #F2294E;
+  width: 6.25%;
+  background-color: black;
 }
 
 .date{
@@ -363,6 +367,18 @@ header {
   display: flex;
   align-items: center;
 }
+.logowrapper a:hover{
+  filter: invert(26%) sepia(46%) saturate(5515%) hue-rotate(335deg) brightness(97%) contrast(95%);
+  animation: logoslide 2s infinite 0s
+}
+
+@keyframes logoshake {
+  0%  { padding-left: 0vw; }
+  25% { padding-left: 1vw;  }
+  50% { padding-left: 1vw; }
+  100% { padding-left: 0vw;  }
+}
+
 
 .squarelogo {
   max-height: 10vh;
@@ -414,8 +430,6 @@ header {
       box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
   }
 }
-
-
 
 /* Navbar - Menu */
 nav {
@@ -476,9 +490,9 @@ nav a:hover:after {
   display: block;
   text-align: left;
   width: 100%;
-  background: linear-gradient(-45deg,#299ff2, #5896f4, #7d8bf0, #9e7ee7, #ba6ed8, #d15dc3, #e34baa, #ef398d, #f42b6e, #F2294E);
+  background: linear-gradient(-45deg, #9e7ee7, #ba6ed8, #d15dc3, #e34baa, #ef398d, #f42b6e, #F2294E, #F2294E, #F2294E);
   background-size: 400% 400%;
-  animation: gradient 15s 5s ease-in-out infinite;
+  animation: gradient 5s 15s ease-in infinite;
 }
 @keyframes gradient {
 0% {
@@ -492,10 +506,6 @@ nav a:hover:after {
 }
 }
 
-.maskwrapper {
-  color: white;
-}
-
 .mask{
   overflow: hidden;
   height: 6vw;
@@ -507,47 +517,7 @@ nav a:hover:after {
   color: white;
   position: relative;
   font-size: 4.5vw;
-
-/*animation*/
--webkit-animation:move 8s;
-   -moz-animation:move 8s;
-    -ms-animation:move 8s;
-     -o-animation:move 8s;
-        animation:move 8s;
-/*animation-iteration-count*/
--webkit-animation-iteration-count:infinite;
-   -moz-animation-iteration-count:infinite;
-    -ms-animation-iteration-count:infinite;
-     -o-animation-iteration-count:infinite;
-        animation-iteration-count:infinite;
-/*animation-delay*/
--webkit-animation-delay:4s;
-   -moz-animation-delay:4s;
-    -ms-animation-delay:4s;
-     -o-animation-delay:4s;
-        animation-delay:4s;
-}
-
-@-webkit-keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -6vw; }
-  50% { top: -12vw; }
-  75% { top: 6vw; }
-  100% { top: 0vw; }
-}
-@-moz-keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -6vw; }
-  50% { top: -12vw; }
-  75% { top: 6vw; }
-  100% { top: 0vw; }
-}
-@-o-keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -6vw; }
-  50% { top: -12vw; }
-  75% { top: 6vw; }
-  100% { top: 0vw; }
+  animation: move 8s infinite 4s
 }
 @keyframes move {
   0%  { top: 0vw; }
@@ -556,8 +526,6 @@ nav a:hover:after {
   75% { top: 6vw; }
   100% { top: 0vw; }
 }
-
-
 
 /* Changes Logo when on small screen */
 @media only screen and (max-width: 650px) {
@@ -585,15 +553,13 @@ nav{
 .acknowledgement h2{
   font-size: 3.5vw;
 }
-
 }
 .artists{
   height: 100%;
     width: 100%;
     grid-area: artists;
-    background-color: #ba6ed8;
-
 }
+
 .mySlides {display: none}
 img {
   vertical-align: middle;
