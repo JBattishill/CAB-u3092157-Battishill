@@ -14,87 +14,10 @@
     text-align: center;
 }
 
-.logowrapper {
-    padding-left: 5vw;
-    grid-area: logo;
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-    flex-direction: row;
-    align-content: space-around;
-    justify-content: flex-start;
-    float: left;
-    flex-wrap: nowrap;
-}
-
-.squarelogo {
-    max-height: 10vh;
-    display: none;
-    object-fit: scale-down;
-    width: auto;
-}
-
-.widelogo { 
-    max-height: 10vh;
-    object-fit: scale-down;
-    width: auto;
-}
-
-.ctawrapper {
-    grid-area: cta;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.cta {
-    cursor: cell;
-    font-size: 1.6em;
-    color: #F2294E;
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    border: 2px solid #F2294E;
-    border-radius: 100px;
-    padding: .75em 1.5em;
-    transition: .5s all ease-in-out;
-    text-align: center;
-}
-
-.cta:hover {
-    cursor: cell;
-    background-color: #F2294E;
-    color: white;
-    animation: none;
-    animation-play-state: paused;
-}
-
-.button-pulse {
-    animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
-    box-shadow: 0 0 0 0 #F2294E;
-}
-
-@keyframes pulse {
-    to {
-        box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
-    }
-}
-
 footer {
     grid-area: footer;
     background-color: rgba(255, 238, 0, 0.897);
     text-align: center;
-}
-
-header {
-    width: 100%;
-    row-gap: 2vh;
-    margin-top: 2vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "logo logo logo logo logo . . cta"
-        "nav nav nav nav nav nav nav nav";
 }
 
 .container {
@@ -123,7 +46,7 @@ header {
 .herotext{
     height: 100%;
     display: block;
-    text-align: center;
+    text-align: left;
 }
   .herotext h1{
     font-size: 4.5vw;
@@ -148,36 +71,49 @@ background-color: bisque;
 }
 
 nav {
-    padding: 0 5vw;
+    margin: 0;
+    padding: 1vh 5vw;
     width: 100%;
     grid-area: nav;
-    background-color: #F2294E;
     font-family: stolzl, sans-serif;
-    font-size: 150%;
-    box-shadow: 0 11px 10px 0 rgba(3, 6, 26, 0.35);
+    font-size: 25px;
+    box-shadow: 0 5px 5px 0 rgba(3, 6, 26, 0.35);
+    background-color: #F2294E;
 }
 
 nav li {
-    display: block;
-    float:left;
-}
-
-nav li:hover {
-    background-color: white;
+display: block;
+float: left;
 }
 
 nav a {
-    display: block;
-    padding: 15px 2.7vw;
-    text-decoration: none;
+    position: relative;
+    border-width: 5px;
     color: white;
+    display: block;
+    padding: 5px 2vw 5px 0;
+    text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline;
     cursor: cell;
-    color: #F2294E;
 }
+
+nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    margin-bottom: -3px;
+    bottom: -6px;
+    display: block;
+    height: 3px;
+    position: relative;
+    background: white;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+  nav a:hover:after { 
+    width: 100%; 
+  }
 
 body {
     overflow: auto;
@@ -191,6 +127,9 @@ body {
     .squarelogo {
         display: flex;
     }
+nav{
+    font-size: 3.1vw;
+}    
 }
 
 /* Testing rotation */
@@ -303,3 +242,86 @@ body {
   mask-size: 80%;
 }
  */
+
+
+/* ------- Completed Work -------- */
+
+/* Grid Layouts - 2 - I want to try to get this down to 1 layout before submitting. */
+/* Header - Logo, Donate button and Navbar */
+header {
+    width: 100%;
+    row-gap: 2vh;
+    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logo logo logo logo logo . cta ."
+        "nav nav nav nav nav nav nav nav";
+}
+/* Logo wrapper, holds the logo in place and pads left to align with rest of page */
+.logowrapper {
+    padding-left: 5vw;
+    grid-area: logo;
+    display: flex;
+}
+/* Media function switches wide logo so */
+
+.squarelogo {
+    max-height: 10vh;
+    display: none;
+    object-fit: scale-down;
+    width: auto;
+}
+
+.widelogo { 
+    max-height: 10vh;
+    object-fit: scale-down;
+    width: auto;
+}
+
+.ctawrapper {
+    grid-area: cta;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cta {
+    cursor: cell;
+    font-size: 1.6em;
+    color: #F2294E;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    border: 2px solid #F2294E;
+    border-radius: 100px;
+    padding: .75em 1.5em;
+    transition: .5s all ease-in-out;
+    text-align: center;
+}
+
+.cta:hover {
+    cursor: cell;
+    background-color: #F2294E;
+    color: white;
+    animation: none;
+    animation-play-state: paused;
+}
+
+.button-pulse {
+    animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0 0 #F2294E;
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+    }
+}
+
+
+
+/* Header - Logo, Donate button and Navbar */
+
+
+/* Header - Logo, Donate button and Navbar */
