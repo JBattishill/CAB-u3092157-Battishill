@@ -1,17 +1,132 @@
-.item-b {
-  grid-area: main;
-  background-color: rgba(255, 0, 0, 0.897);
+.acknowledgement{
+  grid-area: acknowledgement;
+  padding: 2vh 0;
+  line-height: 150%;
 }
 
-.item-c {
-  grid-area: sidebar;
-  background-color: rgba(0, 255, 106, 0.7);
+.acknowledgement h1{
+  font-size: 2vw;
+  padding-bottom: 2vh;
+}
+.acknowledgement h2{
+  font-size: 1.3vw;
 }
 
-.item-d {
-  grid-area: footer;
-  background-color: rgba(255, 238, 0, 0.897);
+.year{
+  display: flex;
+}
+.year a{
+  width: 100%;
+  margin: auto 0;
+  color: white;
+  font-size: 4vw;
+  text-decoration: none;
+  background-color: #F2294E;
+  color: white;
+  padding: 0;
   text-align: center;
+}
+.year a:hover{
+  text-decoration: underline;
+  color: white;
+  cursor: cell;
+  background-color: black;
+}
+
+
+.twenty{
+  grid-area: twenty;
+  background-image: url(../images/SA+Adair+to+Black+Mtn+B&W.jpeg);
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.eighteen{
+  grid-area: eighteen;
+  background-image: url(../images/SongStreetProject.jpeg);
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-position-y: 70%;
+  display: flex;
+}
+
+.sponsors{
+  grid-area: sponsors;
+  width: 100%;
+  font-family: stolzl, sans-serif;
+  overflow-wrap: break-word;
+  font-size: 3vw;
+  height: 100%;
+  color: #F2294E;
+}
+
+.sponsorwrapper{
+  margin: auto;
+  background-color: #F2294E;
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sponsorsimg{
+  margin: 0 auto;
+  max-height: 10vh;
+  object-fit: scale-down;
+  width: auto;
+}
+
+.sixteen{
+  grid-area: sixteen;
+  background-image: url(../images/LouisPratt2.jpeg);
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-position-y: 70%;
+  display: flex;
+}
+
+.artists{
+  grid-area: artists;
+}
+
+.commish{
+  grid-area: commish;
+  background-image: url(../images/1080X1080+INSTA_V0.3-05.png);
+  height: 35vh;
+  background-position-x: 40%;
+  background-position-y: 30%;
+  width: auto;
+  background-size: 120%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: bottom;
+  color: white;
+  padding-bottom: 10vh;
+}
+.commish h2{
+  line-height: 150%;
+  position: relative;
+  top: 11vh;
+  margin-bottom: 1vh 0;
+  background-color: black;
+  font-size: 1.5vw;
+}
+
+.covid{
+  grid-area: covid;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.covid h1{
+  color: #F2294E;
+  font-size: 4vw;
+  padding-bottom: 2vh;
 }
 
 footer {
@@ -21,17 +136,21 @@ footer {
 }
 
 .container {
+  font-family: stolzl, sans-serif;
   width: 90vw;
   margin: 0 auto;
   row-gap: 2vh;
+  column-gap: 1vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-      "hero hero hero hero cab cab cab cab"
+      "hero hero hero hero redblock date date date"
       "location location location location location location location location "
-      "acknowledgement acknowledgement acknowledgement twenty twenty twenty twenty twenty "
-      "main main main main main main sidebar sidebar"
+      "acknowledgement acknowledgement acknowledgement acknowledgement acknowledgement twenty twenty twenty "
+      "eighteen eighteen eighteen sponsors sponsors sponsors sponsors sponsors"
+      "artists artists artists artists artists sixteen sixteen sixteen "
+      "commish commish commish covid covid covid covid covid"
       "footer footer footer footer footer footer footer footer";
 }
 .herowrapper{
@@ -47,140 +166,53 @@ footer {
   text-align: left;
 }
 .herotext h1{
-  font-size: 2.5vw;
+  font-size: 5vw;
   color: #F2294E;
+}
+.herotext h2{
+  font-size: 4vw;
+  color: black;
+  padding-bottom: 2vh;
 }
 
 .herotext h3{
   line-height: 150%;
-  padding-top: 1vh;
   font-size: 1.5vw;
-
+}
+.redblock{
+  grid-area: redblock;
+  margin-left: 12vw;
+  height: 120%;
+  width: 12.5%;
+  background-color: #F2294E;
 }
 
-.cabwrapper{
-  grid-area: cab;
+.date{
+  margin: auto;
+  margin-top: 2vh;
+  grid-area: date;
   width: 100%;
   font-family: stolzl, sans-serif;
   overflow-wrap: break-word;
-}
-.cabtext{
+  font-size: 4vw;
   height: 100%;
   display: block;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-.cabtext h1{
-  font-size: 3.5vw;
   color: #F2294E;
 }
-
-.cabtext h3{
-  line-height: 150%;
-  padding-top: 1vh;
-  font-size: 1.5vw;
-}
-.acknowledgement{
-grid-area: acknowledgement;
-background-color: bisque;
-}
-
-.twenty{
-  grid-area: twenty;
-  background-color: coral;
-
-}
-
-
-/* Testing rotation */
-.locationwrapper{
-  grid-area: location;
-  font-family: stolzl, sans-serif;
-  overflow-wrap: break-word;
-}
-.locationblock{
-  display: block;
+.iconwrapper{
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  width: 100%;
-  background: linear-gradient(-45deg,#299ff2, #5896f4, #7d8bf0, #9e7ee7, #ba6ed8, #d15dc3, #e34baa, #ef398d, #f42b6e, #F2294E);
-background-size: 400% 400%;
-animation: gradient 15s 5s ease-in-out infinite;
 }
-@keyframes gradient {
-0% {
-  background-position: 0% 50%;
-}
-50% {
-  background-position: 100% 50%;
-}
-100% {
-  background-position: 0% 50%;
-}
-}
-
-.maskwrapper {
-  color: white;
-}
-
-.mask{
-  text-align: center;
-  overflow: hidden;
-  height: 9vw;
-  line-height: 9vw;
-}
-
-.masktext {
-  text-align: center;
-  color: white;
-  position: relative;
-  font-size: 4.5vw;
-
-/*animation*/
--webkit-animation:move 8s;
-   -moz-animation:move 8s;
-    -ms-animation:move 8s;
-     -o-animation:move 8s;
-        animation:move 8s;
-/*animation-iteration-count*/
--webkit-animation-iteration-count:infinite;
-   -moz-animation-iteration-count:infinite;
-    -ms-animation-iteration-count:infinite;
-     -o-animation-iteration-count:infinite;
-        animation-iteration-count:infinite;
-/*animation-delay*/
--webkit-animation-delay:4s;
-   -moz-animation-delay:4s;
-    -ms-animation-delay:4s;
-     -o-animation-delay:4s;
-        animation-delay:4s;
-}
-
-@-webkit-keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -9vw; }
-  50% { top: -18vw; }
-  75% { top: 9vw; }
-  100% { top: 0vw; }
-}
-@-moz-keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -9vw; }
-  50% { top: -18vw; }
-  75% { top: 9vw; }
-  100% { top: 0vw; }
-}
-@-o-keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -9vw; }
-  50% { top: -18vw; }
-  75% { top: 9vw; }
-  100% { top: 0vw; }
-}
-@keyframes move {
-  0%  { top: 0vw; }
-  25% { top: -9vw; }
-  50% { top: -18vw; }
-  75% { top: 9vw; }
-  100% { top: 0vw; }
+/* filter code from this website- https://codepen.io/sosuke/pen/Pjoqqp */
+.icon{
+  filter: invert(26%) sepia(46%) saturate(5515%) hue-rotate(335deg) brightness(97%) contrast(95%);
+  height: 10vw;
+  object-fit: scale-down;
+  width: auto;
 }
 
 /* testing CAB ICON mask - not working
@@ -225,8 +257,8 @@ header {
   grid-area: logo;
   display: flex;
   align-items: center;
-
 }
+
 .squarelogo {
   max-height: 10vh;
   display: none;
@@ -327,7 +359,99 @@ nav a:hover:after {
 }
 
 
-/* Body - manages overflow */
+/* Hero row -  */
+/* Location rotation - Text showing the names and locations of different contour festivals*/
+.locationwrapper{
+  grid-area: location;
+  font-family: stolzl, sans-serif;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+.locationblock{
+  display: block;
+  text-align: left;
+  width: 100%;
+  background: linear-gradient(-45deg,#299ff2, #5896f4, #7d8bf0, #9e7ee7, #ba6ed8, #d15dc3, #e34baa, #ef398d, #f42b6e, #F2294E);
+  background-size: 400% 400%;
+  animation: gradient 15s 5s ease-in-out infinite;
+}
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+.maskwrapper {
+  color: white;
+}
+
+.mask{
+  overflow: hidden;
+  height: 6vw;
+  line-height: 6vw;
+}
+
+.masktext {
+  text-align: center;
+  color: white;
+  position: relative;
+  font-size: 4.5vw;
+
+/*animation*/
+-webkit-animation:move 8s;
+   -moz-animation:move 8s;
+    -ms-animation:move 8s;
+     -o-animation:move 8s;
+        animation:move 8s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:4s;
+   -moz-animation-delay:4s;
+    -ms-animation-delay:4s;
+     -o-animation-delay:4s;
+        animation-delay:4s;
+}
+
+@-webkit-keyframes move {
+  0%  { top: 0vw; }
+  25% { top: -6vw; }
+  50% { top: -12vw; }
+  75% { top: 6vw; }
+  100% { top: 0vw; }
+}
+@-moz-keyframes move {
+  0%  { top: 0vw; }
+  25% { top: -6vw; }
+  50% { top: -12vw; }
+  75% { top: 6vw; }
+  100% { top: 0vw; }
+}
+@-o-keyframes move {
+  0%  { top: 0vw; }
+  25% { top: -6vw; }
+  50% { top: -12vw; }
+  75% { top: 6vw; }
+  100% { top: 0vw; }
+}
+@keyframes move {
+  0%  { top: 0vw; }
+  25% { top: -6vw; }
+  50% { top: -12vw; }
+  75% { top: 6vw; }
+  100% { top: 0vw; }
+}
+
 
 
 /* Changes Logo when on small screen */
@@ -340,5 +464,6 @@ nav a:hover:after {
   }
 nav{
   font-size: 3.1vw;
-}    
+}
+
 }
