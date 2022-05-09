@@ -1,25 +1,25 @@
-﻿# Responsive Website
+﻿# Static Site Generator
 **u3092157 - Jarryd Battishill**
 
-I believe that the target audience for this site is quite broad, I chose these demographics to consider:
-**age -** All ages
-**income level -** Mid to high-income levels, but also students on a lower income.
+I chose to build my website as a portfolio for my design business.
+
+## Demographic:
+**age -** 16+
+**income level -** All income levels, due to affordable pricing.
 **cultural background -** all cultures
-**employment -** Public servants because Canberra
-**location -** Canberrans, but also art lovers from across Australia, Sydney crowd could be large.
-**level of education -** Higher education level because Canberra, but visitors can be from all levels.
+**employment -** Public servants because Canberra, but could  be anything.
+**location -** Canberrans, but also anyone from across Australia or even international - gotta dream big.
+**level of education -** All levels
 
 ## Goals
 
-• A simple, clean website that's easy to read and understand.
-• Minimalist approach
-• Interesting artistic design
+• A simple, clean website that's easy to navigate and understand
+• Fun, creative and reflective of my personality
 • Responsive
 
 ## Inspiration
 
-I took a lot of inspiration for my site from a range of websites I found on [www.awwwards.com](http://www.awwwards.com).
-But I fell in love with the layout of the Museum of Modern Art in New York, [www.moma.org](http://www.moma.org) and tried to replicate the alternating counterbalanced look of the site. I don’t think my page looks as professional as the MoMA sight but I'm proud of it.
+I honestly didn't take much inspiration from anywhere except the 11ty/Tailwind template I used - https://jamstackthemes.dev/theme/11ty-landing-page/
 
 ## Planning
 
